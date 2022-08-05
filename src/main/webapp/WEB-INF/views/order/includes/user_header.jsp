@@ -14,6 +14,8 @@
 <link rel="stylesheet" href="/resources/css/menu.css" type="text/css">
 <link rel="stylesheet" href="/resources/css/owl.carousel.min.css" type="text/css">
 <link rel="stylesheet" href="/resources/css/board.css" type="text/css">
+<link rel="stylesheet" href="/resources/css/join.css" type="text/css">
+<link rel="stylesheet" href="/resources/css/login.css" type="text/css">
 <link rel="stylesheet" href="/resources/css/bootstrap.min.css" type="text/css">
 
 
@@ -42,19 +44,18 @@
                  <div class="col-lg-5">
                                          <div class="header__top__right">
                             <div class="header__top__right__social">
-                               <a href="#"><i class="fa fa-se"><span style="color:green">회원가입</span></i> </a>
+                               <a href="/member/join"><i class="fa fa-se"><span style="color:green">회원가입</span></i> </a>
                             </div>
                             <div class="header__top__right__language">
                                 <div>고객센터</div>
                                 <span class="arrow_carrot-down"></span>
                                 <ul>
-                                    <li><a href="#">공지사항</a></li>
+                                    <li><a href="/notice/list">공지사항</a></li>
                                     <li><a href="/qna/list">1:1상담</a></li>
                                 </ul>
                             </div>
                             
-                            
-                           	<!-- 로그인 하지 않은 상태 -->
+                            	<!-- 로그인 하지 않은 상태 -->
                             <div class="header__top__right__auth ">
                                 <c:if test = "${member == null }">
                     			<div class="login_button"><a href="/member/login">로그인</a></div>           
@@ -71,7 +72,9 @@
 				                </c:if>
 				             </div>
 				             
-				             
+				                
+                            </div>
+                        </div>
                  </div>
                   </div>
                   
@@ -101,7 +104,8 @@
                             <li><a href="#">Recommend</a>
   
                                 
-							<li><a href="/cart/${member.member_id }"><i class="fa fa-shopping-bag w-100 h-100" ></i></a></li>
+                             <li><a href="/cart/${member.member_id }"><i class="fa fa-shopping-bag w-100 h-100" ></i></a></li>
+														
                         </ul>
                     </nav>
                 </div>

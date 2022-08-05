@@ -32,26 +32,26 @@
 								<input class="form-control id_input" name="member_id">
 							</div>
 							<span class="id_input_re_1">사용 가능한 아이디입니다.</span>
-							<span class="id_input_re_2">아이디가 이미 존재합니다.</span>
-							<span class="final_id_ck">아이디를 입력해주세요.</span>
+							<span class="id_input_re_2 text-danger">아이디가 이미 존재합니다.</span>
+							<span class="final_id_ck text-danger">아이디를 입력해주세요.</span>
 						</div> 
 						
 						
 							<div class="form-group pw_wrap">
 								<div class="pw_name">비밀번호</div>
 								<div class="pw_input_box">
-								<input class="pw_input form-control" name="pass">
+								<input class="pw_input form-control" name="pass" type="password">
 							</div>
-							<span class="final_pw_ck">비밀번호를 입력해주세요.</span>
+							<span class="final_pw_ck text-danger">비밀번호를 입력해주세요.</span>
 						</div> 
 						
 
 							<div class="form-group pwck_wrap">
 									<div class="pwck_name">비밀번호 확인</div>
 								<div class="pwck_input_box">
-								<input class="form-control pwck_input">
+								<input class="form-control pwck_input" type="password">
 							</div>
-							<span class="final_pwck_ck">비밀번호 확인을 입력해주세요.</span>
+							<span class="final_pwck_ck text-danger">비밀번호 확인을 입력해주세요.</span>
 							<span class="pwck_input_re_1">비밀번호가 일치합니다.</span>
                 			<span class="pwck_input_re_2">비밀번호가 일치하지 않습니다.</span>
 						</div> 
@@ -61,7 +61,7 @@
 								<div class="user_input_box">
 								<input class="form-control user_input" name="member_name">
 							</div>
-							<span class="final_name_ck">이름을 입력해주세요.</span>
+							<span class="final_name_ck text-danger">이름을 입력해주세요.</span>
 						</div>
 						
 						<div class="form-group mail_wrap">
@@ -69,7 +69,7 @@
 				<div class="mail_input_box">
 					<input class="form-control mail_input" name="email">
 				</div>
-				<span class="final_mail_ck">이메일을 입력해주세요.</span>
+				<span class="final_mail_ck text-danger">이메일을 입력해주세요.</span>
 				<sapn class="mail_input_box_warn"></sapn>
 				
 				<div class="form-group mail_check_wrap">
@@ -111,7 +111,7 @@
 						<input class="form-control address_input_3" name="address3" readonly="readonly">
 					</div>
 				</div>
-				<span class="final_addr_ck">주소를 입력해주세요.</span>
+				<span class="final_addr_ck text-danger">주소를 입력해주세요.</span>
 			</div>
 							
 							
@@ -232,8 +232,8 @@ $(document).ready(function(){
 //아이디 중복 검사
 $('.id_input').on("propertychange change keyup paste input", function(){
 
-	var memberId = $('.id_input').val();			// .id_input에 입력되는 값
-	var data = {memberId : memberId}				// '컨트롤에 넘길 데이터 이름' : '데이터(.id_input에 입력되는 값)'
+	var memberId = $('.id_input').val();			
+	var data = {memberId : memberId}				
 	
 	$.ajax({
 		type : "post",

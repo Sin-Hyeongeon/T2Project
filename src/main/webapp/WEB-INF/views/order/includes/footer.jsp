@@ -2,7 +2,7 @@
 
 
 <!-- Js Plugins -->
-
+<script src="/resources/js/jquery-3.3.1.min.js"></script>
 <script src="/resources/js/bootstrap.min.js"></script>
 <script src="/resources/js/jquery.nice-select.min.js"></script>
 <script src="/resources/js/jquery-ui.min.js"></script>
@@ -12,8 +12,9 @@
 <script src="/resources/js/main.js"></script>
 
 
+
    <!-- Footer Section Begin -->
-    <footer class="footer spad">
+    <footer class="footer spad bg-white">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6">
@@ -41,7 +42,7 @@
                    	 <br>
                     	<br>
                     		<br>
-                    					<br>
+                    			<br>
                         <h6>Useful Links</h6>
                         <ul>
                             <li><a href="#">HOME</a></li>
