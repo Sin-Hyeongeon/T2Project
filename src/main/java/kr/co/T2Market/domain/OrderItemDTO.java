@@ -2,29 +2,29 @@ package kr.co.T2Market.domain;
 
 public class OrderItemDTO {
 
-	// 주문 번호 
+	// 주문 번호
 	private String recipt_no;
-	
-	// 상품 번호 
-    private int product_no;
-    
-	// 주문 수량 
-    private int sales;
-    
-	// orderItem 기본키 
-    private int orderItemId;
-    
-	// 상품 한 개 가격 
-    private int sell_price;
-    
-	// 상품 할인율 
-    private int discount;
-    
-	// 할인 적용된 가격 
-    private int real_price;
-    
-    // 총 금액 
-    private int total_sales;
+
+	// 상품 번호
+	private int product_no;
+
+	// 주문 수량
+	private int sales;
+
+	// orderItem 기본키
+	private int orderItemId;
+
+	// 상품 한 개 가격
+	private int sell_price;
+
+	// 상품 할인율
+	private int discount;
+
+	// 할인 적용된 가격
+	private int real_price;
+
+	// 총 금액
+	private int total_sales;
 
 	public String getRecipt_no() {
 		return recipt_no;
@@ -91,15 +91,15 @@ public class OrderItemDTO {
 	}
 
 	public void initSaleTotal() {
-		this.real_price = (int)((this.sell_price * (100-this.discount))/100);
+		this.real_price = (int) ((this.sell_price * (100 - this.discount)) / 100);
 		this.total_sales = this.real_price * this.sales;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "OrderItemDTO [recipt_no=" + recipt_no + ", product_no=" + product_no + ", sales=" + sales
 				+ ", orderItemId=" + orderItemId + ", sell_price=" + sell_price + ", discount=" + discount
 				+ ", real_price=" + real_price + ", total_sales=" + total_sales + "]";
 	}
-    
+
 }

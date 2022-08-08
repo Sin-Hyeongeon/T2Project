@@ -14,24 +14,23 @@ public class OrderServiceImpl implements OrderService {
 
 	@Autowired
 	private OrderMapper orderMapper;
-	
-	
+
 	@Override
 	public List<OrderPageItemDTO> getGoodsInfo(List<OrderPageItemDTO> orders) {
-		
+
 		List<OrderPageItemDTO> result = new ArrayList<OrderPageItemDTO>();
-		
-		for(OrderPageItemDTO ord : orders) {
-			
+
+		for (OrderPageItemDTO ord : orders) {
+
 			OrderPageItemDTO goodsInfo = orderMapper.getGoodsInfo(ord.getProduct_no());
-			
+
 			goodsInfo.setSales(ord.getSales());
-			
+
 			goodsInfo.initSaleTotal();
-			
+
 			result.add(goodsInfo);
 		}
-		
+
 		return result;
 	}
 

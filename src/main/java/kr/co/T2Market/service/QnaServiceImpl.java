@@ -14,12 +14,12 @@ import lombok.extern.log4j.Log4j;
 @Service
 @AllArgsConstructor
 public class QnaServiceImpl implements QnaService {
-	
+
 	private QnaMapper mapper;
-	
+
 	@Override
 	public void register(QnaVO qna) {
-		
+
 		mapper.insertSelectKey(qna);
 
 	}
@@ -47,17 +47,17 @@ public class QnaServiceImpl implements QnaService {
 //		// TODO Auto-generated method stub
 //		return mapper.getList();
 //	}
-	
+
 	@Override
 	public List<QnaVO> getList(QnaCriteria cri) {
-		
+
 		return mapper.getListWithPaging(cri);
-		
+
 	}
-	
+
 	@Override
 	public int getTotal(QnaCriteria cri) {
-		
+
 		return mapper.getTotalCount(cri);
 	}
 

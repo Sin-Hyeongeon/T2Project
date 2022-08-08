@@ -6,7 +6,7 @@ public class OrderPageItemDTO {
 
 	// 상품 번호
 	private String product_no;
-	
+
 	// 상품 개수
 	private int sales;
 

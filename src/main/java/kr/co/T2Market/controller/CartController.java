@@ -16,44 +16,44 @@ import kr.co.T2Market.service.CartService;
 
 @Controller
 public class CartController {
-	
+
 	@Autowired
 	private CartService cartService;
 
 	@PostMapping("/cart/add")
 	@ResponseBody
 	public String addCartPOST(CartDTO cart, HttpServletRequest request) {
-		
-		//카트 등록
-		
+
+		// 카트 등록
+
 		int result = cartService.addCart(cart);
-		
+
 		return result + "";
 	}
-	
+
 	@GetMapping("/cart/{member_id}")
-	public String cartPageGET(@PathVariable("member_id") String member_id , Model model) {
-		
+	public String cartPageGET(@PathVariable("member_id") String member_id, Model model) {
+
 		model.addAttribute("cartInfo", cartService.getCartList(member_id));
-		
+
 		return "/cart";
 	}
-	
+
 	@PostMapping("/cart/update")
 	public String updateCartPOST(CartDTO cart) {
-		
+
 		cartService.modifyCount(cart);
-		
+
 		return "redirect:/cart/" + cart.getMember_id();
-	
+
 	}
-	
+
 	@PostMapping("/cart/delete")
 	public String deleteCartPOST(CartDTO cart) {
-		
+
 		cartService.deleteCart(cart.getCart_no());
-		
+
 		return "redirect:/cart/" + cart.getMember_id();
 	}
-	
+
 }

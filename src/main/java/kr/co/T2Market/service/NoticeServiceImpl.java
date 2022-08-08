@@ -16,12 +16,12 @@ import lombok.extern.log4j.Log4j;
 @Service
 @AllArgsConstructor
 public class NoticeServiceImpl implements NoticeService {
-	
+
 	private NoticeMapper mapper;
-	
+
 	@Override
 	public void register(NoticeVO notice) {
-		
+
 		mapper.insertSelectKey(notice);
 
 	}
@@ -49,6 +49,5 @@ public class NoticeServiceImpl implements NoticeService {
 		// TODO Auto-generated method stub
 		return mapper.getList();
 	}
-	
 
 }

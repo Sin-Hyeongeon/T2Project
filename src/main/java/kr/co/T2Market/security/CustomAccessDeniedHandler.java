@@ -20,7 +20,7 @@ public class CustomAccessDeniedHandler implements AccessDeniedHandler {
 		// TODO Auto-generated method stub
 		log.error("Access Denied Handler");
 		log.error("Redirect.................");
-		
+
 		response.sendRedirect("/accessError");
 	}
 

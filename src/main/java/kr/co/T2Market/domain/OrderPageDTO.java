@@ -17,6 +17,5 @@ public class OrderPageDTO {
 	public String toString() {
 		return "OrderPageDTO [orders=" + orders + "]";
 	}
-	
-	
+
 }
