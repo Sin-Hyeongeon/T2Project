@@ -35,13 +35,13 @@
   
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="/resources/img/event1.PNG" height="370" width="1670" class="d-block w-10" data-bs-interval="100" alt="...">
+      <img src="/resources/img/event1.jpg" height="450" width="1920" class="d-block w-10" data-bs-interval="100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="/resources/img/event2.PNG" height="370" width="1670" class="d-block w-10" data-bs-interval="100" alt="...">
+      <img src="/resources/img/event2.jpg" height="450" width="1920" class="d-block w-10" data-bs-interval="100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="/resources/img/event3.PNG" height="370" width="1670" class="d-block w-7" data-bs-interval="100" alt="...">
+      <img src="/resources/img/event3.jpg" height="450" width="1920" class="d-block w-7" data-bs-interval="100" alt="...">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

@@ -32,7 +32,7 @@
 							</div>
 
 							<div class="form-group">
-								<label>작성자</label> <input class="form-control" name='member_id'>
+								<label>작성자</label> <input class="form-control" name='member_id' value='<c:out value="${member.member_id }"/>' readonly="readonly">
 							</div>
 
 							<div class="mb-3">

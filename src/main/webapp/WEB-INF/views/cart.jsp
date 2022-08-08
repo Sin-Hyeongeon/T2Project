@@ -27,93 +27,92 @@
 		</div>
 	</section>
 
-	<div class="">
-		<section class="shoping-cart spad">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="shoping__cart__table">
-							<table>
-								<thead>
+	<section class="shoping-cart spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="shoping__cart__table">
+						<table>
+							<thead>
+								<tr>
+									<th></th>
+									<th class="shoping__product pl-5">제품명</th>
+									<th>가격</th>
+									<th>개수</th>
+									<th>합계</th>
+									<th>삭제</th>
+								</tr>
+							</thead>
+							<tbody>
+								<c:forEach items="${cartInfo}" var="ci">
 									<tr>
-										<th></th>
-										<th class="shoping__product pl-5">제품명</th>
-										<th>가격</th>
-										<th>개수</th>
-										<th>합계</th>
-										<th>삭제</th>
+										<td class="cart_info_td"><input type="checkbox"
+											class="individual_cart_checkbox input_size_20"
+											checked="checked"> <input type="hidden"
+											class="individual_sellPrice_input" value="${ci.sell_price}">
+											<input type="hidden" class="individual_realPrice_input"
+											value="${ci.real_price}"> <input type="hidden"
+											class="individual_sales_input" value="${ci.sales}"> <input
+											type="hidden" class="individual_totalPrice_input"
+											value="${ci.real_price * ci.sales}"> <input
+											type="hidden" class="individual_product_no_input"
+											value="${ci.product_no}"></td>
+
+										<td class="shoping__cart__item">
+											<h5>
+												<b>${ci.product_name}</b>
+											</h5>
+										</td>
+										<td class="shoping__cart__price"><fmt:formatNumber
+												value="${ci.real_price}" pattern="#,###원" /></td>
+										<td class="td_width_4 table_text_align_center">
+											<div class="table_text_align_center quantity_div">
+												<b><input type="text" value="${ci.sales}"
+													class="quantity_input col text-center"
+													style="border: none;"></b>
+												<button class="quantity_btn plus_btn bg-white"
+													style="border: none;">+</button>
+												<button class="quantity_btn minus_btn bg-white"
+													style="border: none;">-</button>
+											</div>
+											<button class="quantity_modify_btn bg-white"
+												style="border: none;" data-cart_no="${ci.cart_no }">변경</button>
+										</td>
+										<td class="shoping__cart__total"><fmt:formatNumber
+												value="${ci.total_sales}" pattern="#,###원" /></td>
+										<td class="shoping__cart__total">
+											<button class="delete_btn bg-white text-danger"
+												style="border: none;" data-cart_no="${ci.cart_no}">삭제</button>
+										</td>
+
+
 									</tr>
-								</thead>
-								<tbody>
-									<c:forEach items="${cartInfo}" var="ci">
-										<tr>
-											<td class="cart_info_td"><input type="checkbox"
-												class="individual_cart_checkbox input_size_20"
-												checked="checked"> <input type="hidden"
-												class="individual_sellPrice_input" value="${ci.sell_price}">
-												<input type="hidden" class="individual_realPrice_input"
-												value="${ci.real_price}"> <input type="hidden"
-												class="individual_sales_input" value="${ci.sales}">
-												<input type="hidden" class="individual_totalPrice_input"
-												value="${ci.real_price * ci.sales}"> <input
-												type="hidden" class="individual_product_no_input"
-												value="${ci.product_no}"></td>
-
-											<td class="shoping__cart__item">
-												<h5>
-													<b>${ci.product_name}</b>
-												</h5>
-											</td>
-											<td class="shoping__cart__price"><fmt:formatNumber
-													value="${ci.real_price}" pattern="#,###원" /></td>
-											<td class="td_width_4 table_text_align_center">
-												<div class="table_text_align_center quantity_div">
-													<b><input type="text" value="${ci.sales}"
-														class="quantity_input col text-center"
-														style="border: none;"></b>
-													<button class="quantity_btn plus_btn bg-white"
-														style="border: none;">+</button>
-													<button class="quantity_btn minus_btn bg-white"
-														style="border: none;">-</button>
-												</div>
-												<button class="quantity_modify_btn bg-white"
-													style="border: none;" data-cart_no="${ci.cart_no }">변경</button>
-											</td>
-											<td class="shoping__cart__total"><fmt:formatNumber
-													value="${ci.total_sales}" pattern="#,###원" /></td>
-											<td class="shoping__cart__total">
-												<button class="delete_btn bg-white text-danger" style="border: none;"
-													data-cart_no="${ci.cart_no}">삭제</button>
-											</td>
-
-
-										</tr>
-									</c:forEach>
-								</tbody>
-							</table>
-						</div>
+								</c:forEach>
+							</tbody>
+						</table>
 					</div>
-				</div>
-
-				<div class="col-lg-12 bg-white" align="center">
-					<div class="shoping__checkout bg-white">
-						<h5 align="center">총 결제 금액</h5>
-						<ul>
-							<li></li>
-
-							<li><div class="text-danger" align="center"
-									style="font-size: 20px">
-									<div class="totalPrice_div">$454.98</div>
-								</div></li>
-
-							<button class="order_btn btn btn-success">주문하기</button>
-					</div>
-					</ul>
 				</div>
 			</div>
-	</div>
 
-	</div>
+			<div class="col-lg-12 bg-white" align="center">
+				<div class="shoping__checkout bg-white">
+					<h5 align="center">총 결제 금액</h5>
+					<ul>
+						<li></li>
+
+						<li><div class="text-danger" align="center"
+								style="font-size: 20px">
+								<div class="totalPrice_div">$1.0</div>
+							</div></li>
+
+						<button class="order_btn btn btn-success">주문하기</button>
+				</div>
+				</ul>
+			</div>
+		</div>
+
+
+		</div>
 	</section>
 
 	</div>

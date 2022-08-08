@@ -5,18 +5,31 @@ import lombok.Data;
 
 public class CartDTO {
 
+	// 카트 번호
 	private String cart_no;
+	
+	// 회원 id
 	private String member_id;
+
+	// 상품 번호
 	private String product_no;
+	
+	// 상품 개수
 	private int sales;
 	
-	//product
+	// 상품명
 	private String product_name;
+	
+	// 상품 단가
 	private int sell_price;
+	
+	// 할인율
 	private int discount;
 	
 	//할인율 계산
 	private int real_price;
+	
+	//총 판매가
 	private int total_sales;
 	
 	

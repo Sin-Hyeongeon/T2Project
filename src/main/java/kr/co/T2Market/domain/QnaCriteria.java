@@ -8,8 +8,11 @@ import lombok.ToString;
 @Setter
 @ToString
 public class QnaCriteria {
-
+	
+	// 페이지 개수
 	private int pageNum;
+	
+	// 한 페이지에 들어갈 글 개수
 	private int amount;
 	
 	public QnaCriteria() {

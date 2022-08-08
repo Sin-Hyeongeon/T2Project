@@ -36,6 +36,7 @@ public class MemberVO {
 	//회원 돈
 	private int money;
 	
+	//사용여부 
 	private String active;
 	
 }

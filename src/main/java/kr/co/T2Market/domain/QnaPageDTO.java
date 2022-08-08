@@ -7,11 +7,16 @@ import lombok.ToString;
 @ToString
 public class QnaPageDTO {
 
+	
 	private int startPage;
+	
 	private int endPage;
+	
 	private boolean prev, next;
 	
+	// 전체 개수
 	private int total;
+	
 	private QnaCriteria cri;
 	
 	public QnaPageDTO(QnaCriteria cri, int total) {
