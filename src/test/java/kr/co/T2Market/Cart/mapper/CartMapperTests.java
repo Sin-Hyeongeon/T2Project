@@ -12,14 +12,13 @@ import kr.co.T2Market.domain.CartDTO;
 import kr.co.T2Market.mapper.CartMapper;
 import lombok.Setter;
 
-
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
 public class CartMapperTests {
 
 	@Autowired
 	private CartMapper mapper;
-	
+
 //	@Test
 //	public void addCart() {
 //		String member_id = "member1";
@@ -46,9 +45,9 @@ public class CartMapperTests {
 //		mapper.deleteCart(cart_no);
 //	}
 //	
-	
+
 	/* 카트 수량 수정 */
-	
+
 //	@Test
 //	public void modifyCartTest() {
 //		String Cart_no = "5";
@@ -60,19 +59,19 @@ public class CartMapperTests {
 //		
 //		mapper.modifyCount(cart);
 //	}
-	
+
 	@Test
 	public void getCartTest() {
 		String member_id = "member1";
-		
+
 		List<CartDTO> list = mapper.getCart(member_id);
-		for(CartDTO cart : list) {
+		for (CartDTO cart : list) {
 			System.out.println(cart);
 			cart.initSaleTotal();
 			System.out.println("init cart : " + cart);
 		}
 	}
-	
+
 //	@Test
 //	public void checkCartTest() {
 //		
@@ -86,5 +85,5 @@ public class CartMapperTests {
 //		CartDTO resultCart = mapper.checkCart(cart);
 //		System.out.println("결과 : " + resultCart);
 //	}
-	
+
 }

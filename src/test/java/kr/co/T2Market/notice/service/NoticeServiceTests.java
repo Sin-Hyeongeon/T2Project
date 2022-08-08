@@ -21,12 +21,12 @@ import lombok.extern.log4j.Log4j;
 @Log4j
 public class NoticeServiceTests {
 
-	@Setter(onMethod_ = {@Autowired})
+	@Setter(onMethod_ = { @Autowired })
 	private NoticeService service;
-	
+
 	@Test
 	public void testExist() {
-		
+
 		log.info(service);
 		assertNotNull(service);
 	}
@@ -42,12 +42,12 @@ public class NoticeServiceTests {
 //		service.register(notice);
 //		
 //		}
-	
+
 //	@Test
 //	public void testGetList() {
 //		service.getList().forEach(notice -> log.info(notice));
 //		}
-	
+
 //	@Test
 //	public void testGet() {
 //		
@@ -74,5 +74,4 @@ public class NoticeServiceTests {
 //		service.modify(notice);
 //	}
 //	
-	}
-	
+}

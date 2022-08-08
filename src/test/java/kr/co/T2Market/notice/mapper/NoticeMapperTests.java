@@ -23,12 +23,12 @@ public class NoticeMapperTests {
 
 	@Setter(onMethod_ = @Autowired)
 	private NoticeMapper mapper;
-	
+
 	@Test
 	public void testGetList() {
 		mapper.getList().forEach(mapper -> log.info(mapper));
 	}
-	
+
 //	@Test
 //	public void testInsert() {
 //		
@@ -40,13 +40,13 @@ public class NoticeMapperTests {
 //		mapper.insert(notice);
 //
 //	}
-	
+
 //	@Test
 //	public void testRead() {
 //		NoticeVO notice = mapper.read("4");
 //
 //	}
-	
+
 //	@Test
 //	public void testDelete() {
 //		log.info("DELETE COUNT: "+ mapper.delete("4"));
@@ -63,6 +63,5 @@ public class NoticeMapperTests {
 //		int count = mapper.update(notice);
 //		log.info("Update Count: " + count);
 //	}
-	
-	
+
 }

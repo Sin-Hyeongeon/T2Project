@@ -21,12 +21,12 @@ public class QnaMapperTests {
 
 	@Setter(onMethod_ = @Autowired)
 	private QnaMapper mapper;
-	
+
 	@Test
 	public void testGetList() {
 		mapper.getList().forEach(mapper -> log.info(mapper));
 	}
-	
+
 //	@Test
 //	public void testInsert() {
 //		
@@ -43,12 +43,12 @@ public class QnaMapperTests {
 //		QnaVO qna = mapper.read("5");
 //
 //	}
-	
+
 //	@Test
 //	public void testDelete() {
 //		log.info("DELETE COUNT: "+ mapper.delete("7"));
 //	}
-	
+
 //	@Test
 //	public void testUpdate() {
 //		QnaVO qna = new QnaVO();
@@ -60,17 +60,16 @@ public class QnaMapperTests {
 //		int count = mapper.update(qna);
 //		log.info("Update Count: " + count);
 //	}
-	
-	
+
 	@Test
 	public void testPaging() {
-		
+
 		QnaCriteria cri = new QnaCriteria();
 		cri.setPageNum(3);
 		cri.setAmount(10);
-		
+
 		List<QnaVO> list = mapper.getListWithPaging(cri);
-		
+
 		list.forEach(qna -> log.info(qna.getQna_no()));
 	}
 }

@@ -46,7 +46,7 @@
 						<tbody>
 							<tr>
 								<th style="width: 25%;">주문자</th>
-								<td style="width: *">${memberInfo.member_name} |
+								<td style="width: *">${memberInfo.member_name}|
 									${memberInfo.email}</td>
 							</tr>
 						</tbody>
@@ -76,7 +76,7 @@
 									</tr>
 									<tr>
 										<th>주소</th>
-										<td>${memberInfo.address} ${memberInfo.address2}<br>${memberInfo.address3}
+										<td>${memberInfo.address}${memberInfo.address2}<br>${memberInfo.address3}
 											<input class="selectAddress" value="T" type="hidden">
 											<input class="addressee_input"
 											value="${memberInfo.member_name}" type="hidden"> <input
